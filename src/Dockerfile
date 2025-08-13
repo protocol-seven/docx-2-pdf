@@ -14,6 +14,9 @@ COPY home.html /var/www/html/home.html
 # Copy Apache configuration
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
 
+# Copy PHP configuration for uploads and memory limits
+COPY php.ini /usr/local/etc/php/conf.d/php.ini
+
 # Enable mod_rewrite
 RUN a2enmod rewrite
 

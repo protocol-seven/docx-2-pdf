@@ -7,7 +7,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy application source code
-COPY src/ /var/www/html/
+COPY index.php /var/www/html/index.php
+COPY functions.php /var/www/html/functions.php
+COPY home.html /var/www/html/home.html
 
 # Copy Apache configuration
 COPY apache.conf /etc/apache2/sites-available/000-default.conf

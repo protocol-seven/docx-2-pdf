@@ -1,4 +1,8 @@
 <?php
+// Ensure PHP can handle uploads up to 256MB
+ini_set('upload_max_filesize', '256M');
+ini_set('post_max_size', '256M');
+ini_set('memory_limit', '512M');
 
 function displayErrorMessage() : void {
     http_response_code(400);

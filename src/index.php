@@ -41,5 +41,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 // If the user gets here, they done messed up!
 http_response_code(422);
-echo 'Unprocessable Entity';
+echo 'Oops! Please see https://docx-2-pdf.protocol.net for documentation.';
 exit;
